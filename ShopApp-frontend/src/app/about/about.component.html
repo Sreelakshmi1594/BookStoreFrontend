@@ -1,0 +1,118 @@
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>We developed an API using Spring Boot and a client application that will consume the API using Angular.</p>
+  <p>
+    The user will be able to login, and add/remove books from a product list to/from a shopping cart and to place an order.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="assets/images/kati.jpg" alt="Kati" style="width:100%">
+      <div class="container">
+        <h2>Katiuscia Novaes</h2>
+        <p class="title">Software Developer</p>
+        <p>Developer, tech lover and lifetime learner. 😏💕</p>
+        <p>katiuscia.novaesdesa@revature.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/assets/images/tom.jpg" alt="Thah" style="width:100%">
+      <div class="container">
+        <h2>Thanh Tran</h2>
+        <p class="title">Software Developer</p>
+        <p>Developer, tech lover.</p>
+        <p>thanhtam.tran@revature.net</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/assets/images/sree.jpg" alt="Sree" style="width:100%">
+      <div class="container">
+        <h2>Sree Manikandan</h2>
+        <p class="title">Software Developer</p>
+        <p>Developer, tech lover.</p>
+        <p>sree.manikandan@revature.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/assets/images/neethu.jpg" alt="Neethu" style="width:100%">
+      <div class="container">
+        <h2>Neethu Augustin</h2>
+        <p class="title">Software Developer</p>
+        <p>Developer, tech lover.</p>
+        <p>neethu.augustin@revature.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/assets/images/asha.jpg" alt="Aisha" style="width:100%">
+      <div class="container">
+        <h2>Aisha</h2>
+        <p class="title">Software Developer</p>
+        <p>Developer, tech lover.</p>
+        <p>aisha@revature.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src={{src}} alt="new team" style="width:100%"> 
+       <br>
+       <h2>{{fullname}}</h2> 
+       <p>{{email}}</p>
+       <p>{{message}}</p>    
+       <br>  
+    </div>
+  </div>
+
+</div>
+
+
+
+<br>
+<br>
+<div class="about-section">
+<h1>Want to be in our team?</h1>
+<br><br>
+<!-- 
+<button (click)="onClick1()" class="btn btn-success row container-fluid" id="divshow" style="color: white; font-size: 16px;"> Sign Up Now!! {{show1}}</button> -->
+
+<button (click)="onClick1()" class="btn btn-success row container-fluid" id="divshow" style="color: white; font-size: 16px; margin:5px"> Sign Up Now!!</button>
+<ng-template [ngIf]="show1"><div>
+<label class="btn btn-default mb-3" >
+  <form #userlogin = "ngForm" (ngSubmit) = "onClick(userlogin.value)" >
+   <input class="form-label" type = "text" name = "fullName" placeholder = "Your full name" ngModel>
+   <input class="form-label" type = "text" name = "email" placeholder = "Your email" ngModel>
+   <textarea class="form-label" name = "message" placeholder = "Your message" ngModel></textarea>
+    <br/>
+   <!-- <button class="btn btn-success"> Upload your picture! {{show}}</button> -->
+
+   <button class="btn btn-success" style="margin-top: 15px;"> Upload your picture! </button>
+  </form>
+    <ng-template [ngIf]="show"><div><input type="file" (change)="selectFile($event)"></div>
+    </ng-template>
+  </label>
+  <br>
+  <br>
+
+  <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+  
+</div></ng-template>
