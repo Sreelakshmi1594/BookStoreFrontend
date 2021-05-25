@@ -5,7 +5,7 @@ A simulated book store, where a user can create a account and login.
 Once logged-in, the user will be able to browse through the different genre of book upon interest. 
 Once the book/s is/are fixed User can add to cart and checkout.
 
-#Framework
+# Framework
   Spring Tool Suite 4
   Visual Studio Code
   DBeaver
